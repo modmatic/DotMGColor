@@ -12,6 +12,7 @@ void DotMG::init() {
   this->tft->initR(INITR_BLACKTAB);
   this->tft->setRotation(1);
   this->tft->fillScreen(ST77XX_BLACK);
+
   pinMode(PIN_BUTTON_A, INPUT_PULLUP);
   pinMode(PIN_BUTTON_B, INPUT_PULLUP);
   pinMode(PIN_BUTTON_UP, INPUT_PULLUP);
