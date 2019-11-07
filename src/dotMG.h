@@ -59,4 +59,6 @@ public:
   void stopTone() const;
 };
 
+extern DotMG dmg;
+
 #endif

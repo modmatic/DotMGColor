@@ -1,3 +1,7 @@
+// I/O Test Program
+// Written by Andrew Meyer
+// Copyright 2019
+
 #include <DotMG.h>
 
 class Button {
@@ -35,8 +39,6 @@ public:
     this->lastState = this->currentState;
   }
 };
-
-DotMG dmg = DotMG();
 
 void setup() {
   dmg.init();

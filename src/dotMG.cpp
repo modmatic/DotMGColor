@@ -65,3 +65,5 @@ void DotMG::playTone(unsigned int frequency, unsigned long duration) const {
 void DotMG::stopTone() const {
   noTone(PIN_SPEAKER);
 }
+
+DotMG dmg;
