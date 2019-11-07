@@ -379,7 +379,7 @@ void over() {
   dmg.tft->setTextColor(ST7735_WHITE);
   dmg.tft->setTextSize(0);
   dmg.tft->setCursor( 50, (SH/2) - 26);
-  dmg.tft->print("Score:");
+  dmg.tft->print("Score: ");
   dmg.tft->print(score);
   dmg.tft->setCursor( 7, 105);
   dmg.tft->println("Press -Start- to Restart");
