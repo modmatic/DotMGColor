@@ -5,7 +5,7 @@
 // CONTROLS:
 // - D-pad: Control snake
 
-#include <DotMG.h>
+#include <DotMGColor.h>
 
 // Screen size in pixels
 
