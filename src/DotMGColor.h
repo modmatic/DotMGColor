@@ -1,5 +1,5 @@
-#ifndef _DOTMG_H
-#define _DOTMG_H
+#ifndef _DOTMGCOLOR_H
+#define _DOTMGCOLOR_H
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7735.h>
