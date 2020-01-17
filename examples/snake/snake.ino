@@ -185,8 +185,8 @@ void appleLogic(){
     int tempx = appleX;
     int tempy = appleY;
 
-    appleX = random(0, 155);
-    appleY = random(10, 121);
+    appleX = random(5, 150);
+    appleY = random(15, 115);
 
     if (appleX % 5 == 1) appleX--;
     else if (appleX % 5 == 2) appleX-=2;
