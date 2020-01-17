@@ -1,4 +1,4 @@
-#include <DotMGColor.h>
+#include <DotMG_Minimal.h>
 
 DotMG::DotMG() {
   this->tft = new Adafruit_ST7735(PIN_TFT_CS, PIN_TFT_DC, PIN_TFT_RST);

@@ -2,7 +2,7 @@
 // Written by Andrew Meyer
 // Copyright 2019
 
-#include <DotMGColor.h>
+#include <DotMG_Minimal.h>
 
 class Button {
 public:
