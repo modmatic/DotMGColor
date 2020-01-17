@@ -24,35 +24,35 @@ void DotMG::init() {
 }
 
 bool DotMG::isAButtonPressed() const {
-  return (PORT_BUTTON_A & MASK_BUTTON_A) == 0;
+  return !digitalRead(PIN_BUTTON_A);
 }
 
 bool DotMG::isBButtonPressed() const {
-  return (PORT_BUTTON_B & MASK_BUTTON_B) == 0;
+  return !digitalRead(PIN_BUTTON_B);
 }
 
 bool DotMG::isUpButtonPressed() const {
-  return (PORT_BUTTON_UP & MASK_BUTTON_UP) == 0;
+  return !digitalRead(PIN_BUTTON_UP);
 }
 
 bool DotMG::isDownButtonPressed() const {
-  return (PORT_BUTTON_DOWN & MASK_BUTTON_DOWN) == 0;
+  return !digitalRead(PIN_BUTTON_DOWN);
 }
 
 bool DotMG::isLeftButtonPressed() const {
-  return (PORT_BUTTON_LEFT & MASK_BUTTON_LEFT) == 0;
+  return !digitalRead(PIN_BUTTON_LEFT);
 }
 
 bool DotMG::isRightButtonPressed() const {
-  return (PORT_BUTTON_RIGHT & MASK_BUTTON_RIGHT) == 0;
+  return !digitalRead(PIN_BUTTON_RIGHT);
 }
 
 bool DotMG::isStartButtonPressed() const {
-  return (PORT_BUTTON_START & MASK_BUTTON_START) == 0;
+  return !digitalRead(PIN_BUTTON_START);
 }
 
 bool DotMG::isSelectButtonPressed() const {
-  return (PORT_BUTTON_SELECT & MASK_BUTTON_SELECT) == 0;
+  return !digitalRead(PIN_BUTTON_SELECT);
 }
 
 void DotMG::playTone(unsigned int frequency) const {
