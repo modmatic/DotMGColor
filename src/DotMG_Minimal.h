@@ -17,7 +17,7 @@
 #define PIN_BUTTON_START  14
 #define PIN_BUTTON_SELECT 15
 
-#define PIN_SPEAKER 0
+#define PIN_SPEAKER PIN_DAC0
 
 class DotMG
 {
