@@ -1,17 +1,27 @@
 #include <DotMG_Minimal.h>
 
 DotMG::DotMG() {
-  this->tft = new Adafruit_ST7735(PIN_TFT_CS, PIN_TFT_DC, PIN_TFT_RST);
+  spi = new SPIClass(
+  &PERIPH_SPI_DISP,
+  PIN_SPI_DISP_MISO,
+  PIN_SPI_DISP_SCK,
+  PIN_SPI_DISP_MOSI,
+  PAD_SPI_DISP_TX,
+  PAD_SPI_DISP_RX
+);
+  tft = new Adafruit_ST7735(spi, PIN_SPI_DISP_SS, PIN_DISP_DC, PIN_DISP_RST);
 }
 
 DotMG::~DotMG() {
-  delete this->tft;
+  delete tft;
 }
 
-void DotMG::init() {
-  this->tft->initR(INITR_BLACKTAB);
-  this->tft->setRotation(1);
-  this->tft->fillScreen(ST77XX_BLACK);
+void DotMG::begin() {
+  spi->begin();
+
+  tft->initR(INITR_BLACKTAB);
+  tft->setRotation(1);
+  tft->fillScreen(ST77XX_BLACK);
 
   pinMode(PIN_BUTTON_A, INPUT_PULLUP);
   pinMode(PIN_BUTTON_B, INPUT_PULLUP);
@@ -21,6 +31,8 @@ void DotMG::init() {
   pinMode(PIN_BUTTON_RIGHT, INPUT_PULLUP);
   pinMode(PIN_BUTTON_START, INPUT_PULLUP);
   pinMode(PIN_BUTTON_SELECT, INPUT_PULLUP);
+  pinMode(PIN_DISP_LED, OUTPUT);
+  digitalWrite(PIN_DISP_LED, HIGH);
 }
 
 bool DotMG::isAButtonPressed() const {

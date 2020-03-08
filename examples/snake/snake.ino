@@ -30,7 +30,7 @@ int colorCode =1;
 uint16_t COLOR_MAP[7] = {ST7735_RED,ST7735_GREEN,ST7735_CYAN,ST7735_MAGENTA,ST7735_YELLOW,ST7735_BLUE,ST7735_WHITE};
 
 void setup() {
-  dmg.init();
+  dmg.begin();
   start();
 }
 

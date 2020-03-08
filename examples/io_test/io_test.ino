@@ -41,7 +41,7 @@ public:
 };
 
 void setup() {
-  dmg.init();
+  dmg.begin();
 }
 
 Button buttonA = Button(ST77XX_MAGENTA, 294);
